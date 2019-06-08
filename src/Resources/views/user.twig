@@ -1,0 +1,12 @@
+{% extends "layout.twig" %}
+
+{% block Content %}
+
+    <h1>Hello {{ username }}</h1>
+    <div>
+        <ul>
+            <li><a href="{{ urlGenerator.generate('countries',{'username' : username}) }}">Choose a trip</a></li>
+        </ul>
+    </div>
+
+{% endblock %}

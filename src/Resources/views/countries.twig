@@ -1,0 +1,15 @@
+{% extends "layout.twig" %}
+
+{% block Content %}
+
+    <h1>Hello {{ username }}</h1>
+    <table>
+        {% for country_id,country_name in countries %}
+        <tr>
+            <th><a href="{{ urlGenerator.generate('country',{'username' : username, 'country_id' : country_id}) }}">{{ country_id }}</a></th>
+            <td>{{ country_name }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}
